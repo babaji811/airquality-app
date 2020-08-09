@@ -14,17 +14,49 @@
       .logo {
         text-align: center;
         padding: 10px;
-        border: 1px solid white;
+        border: 2px solid black;
       }
       .logo:hover {
         background-color: yellowgreen;
         border: 1px solid blue;
       }
+      .covid {
+        font-family: Roboto, Arial, Helvetica, sans-serif;
+      }
+      .stats {
+        height: 550px;
+        width: 550px;
+      }
+      .jumbotron1 {
+        height: 580px;
+        width: 680px;
+        background-color: wheat;
+        border: 4px solid black;
+      }
+      .badge-pill {
+        height: 30px;
+        width: 120px;
+        text-align: center;
+        font-size: larger;
+      }
+      .body {
+        background-color: aqua;
+      }
+      .logoText {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+      }
+      input[type="text"] {  
+                text-align: center; 
+      }
+      .jumbotron2 {
+        border: 2px solid black;
+      }
     </style>
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <a class="navbar-brand logo" href="#">Air Quality App </a>
+  <body class ="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand logo covid" href="{% url 'home' %}"><span class="logoText">COVID-19 Tracker</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,9 +70,29 @@
             </li>
           </ul>
         </div>
+        <a class="navbar-brand" href="https://www.djangoproject.com/">
+          <img src="http://nedbatchelder.com/pix/django-icon-256.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          powered by <b>dj</b>ango
+        </a>
       </nav>
 
       {% block content %} {% endblock %}
+
+      <!-- Footer -->
+      <!-- Footer -->
+      <footer class="page-footer font-small blue">
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright: Aashay Markale
+          <p class="lead">This is an open-source project. Code is available at</p>
+          <p><a href="https://www.github.com" class="btn btn btn-outline-dark">Github</a></p>
+        </div>
+
+        <!-- Copyright -->
+      
+      </footer>
+      <!-- Footer -->
+      
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

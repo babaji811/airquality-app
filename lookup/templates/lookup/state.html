@@ -1,0 +1,26 @@
+{% extends 'lookup/base.html' %}
+
+{% block title %} {{loc}} {% endblock %}
+
+
+
+{% block content %}
+    <center>
+        
+            <h1>{{loc}}</h1><br>
+            
+            <ul class="list-group list-group-horizontal-md" style="justify-content: center; font-size: larger;">
+                <li class="list-group-item list-group-item-warning"><b>Confirmed Cases:</b> {{confirmedCasesIndian}}</li>
+                <li class="list-group-item list-group-item-success"><b>Discharged:</b> {{discharged}}</li>
+                <li class="list-group-item list-group-item-danger"><b>Deaths:</b> {{deaths}}</li>
+            </ul>  
+           
+    </center>
+    
+{% endblock %}
+
+<!--
+<li>Confirmed Cases: {{confirmedCasesIndian}}</li>
+<li>Discharged: {{discharged}}</li>
+<li>Deaths: {{deaths}}</li>
+-->
